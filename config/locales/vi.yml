@@ -1,0 +1,42 @@
+vi:
+  i18n_base_title: " | Ruby on Rails hướng dẫn Sample App"
+  english: Tiếng Anh
+  vietnam: Tiếng Việt
+  static_pages:
+    home:
+      page: "Home"
+      h1: "<h1>Ưng dụng mẫu</h1>"
+      p_start: <p>
+      line1: Đây là trang chủ cho ứng dụng mẫu
+      url_book: http://www.railstutorial.org
+      book_title: Ruby on Rails Tutorial
+      p_end: </p>
+    about:
+      page: "About"
+      content: <h1>Giới thiệu</h1>
+                <p>
+                  <a href="http://www.railstutorial.org/"><em>Ruby on Rails
+                  Tutorial</em></a> là một
+                  <a href="http://www.railstutorial.org/book">quyển sách</a>
+                  chứa các
+                  <a href="http://screencasts.railstutorial.org/">series</a>
+                  dạy phát triển web với
+                  <a href="http://rubyonrails.org/">Ruby on Rails</a>.
+                </p>
+    help:
+      page: "Help"
+      content: <h1>Cứu tôi với :D</h1>
+                 <p>
+                  Nhận sự giúp đỡ về Ruby on Rails tại
+                  <a href="http://www.railstutorial.org/help">Phần trợ giúp Rails</a>.
+                  Để được trợ giúp thì xem quyển sách này
+                  <a href="http://www.railstutorial.org/book"><em>Ruby on Rails Tutorial</em>
+                  book</a>.
+                 </p>
+    contact:
+      page: "Contact"
+      content: <h1>Contact</h1>
+                <p>
+                  Contact the Ruby on Rails Tutorial about the sample app at the
+                  <a href="http://www.railstutorial.org/contact">contact page</a>.
+                </p>
