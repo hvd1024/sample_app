@@ -67,21 +67,6 @@ p {
   }
 }
 
-/* hidden img */
-
-.hide{
-  display: none;
-}
-
-.myimg > img{
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-  width: 50px;
-  height: auto;
-  z-index: 10000;
-}
-
 /* footer */
 
 footer {
@@ -106,4 +91,17 @@ footer {
       margin-left: 15px;
     }
   }
+}
+
+/* mycss */
+.hide{
+  display: none;
+}
+
+.myimg > img{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 80px;
+  z-index: 10000;
 }

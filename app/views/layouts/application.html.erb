@@ -12,7 +12,9 @@
     <%= render "layouts/header" %>
     <div class="container">
       <%= yield %>
+      <%= render "layouts/footer" %>
     </div>
-    <%= render "layouts/footer" %>
+    <%= link_to image_tag(t(".img_path"), alt: t("logo_text")),
+ t("ruby_url"), class: t(".myclass") %>
   </body>
 </html>
