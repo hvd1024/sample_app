@@ -1,16 +1,15 @@
 vi:
-  i18n_base_title: " | Ruby on Rails hướng dẫn Sample App"
+  base_title: " | Ruby on Rails hướng dẫn Sample App"
   english: Tiếng Anh
   vietnam: Tiếng Việt
   static_pages:
     home:
-      page: "Home"
-      h1: "<h1>Ưng dụng mẫu</h1>"
-      p_start: <p>
+      page: Home
+      h1: Ưng dụng mẫu
       line1: Đây là trang chủ cho ứng dụng mẫu
       url_book: http://www.railstutorial.org
       book_title: Ruby on Rails Tutorial
-      p_end: </p>
+      line2: ứng dụng mẫu.
     about:
       page: "About"
       content: <h1>Giới thiệu</h1>

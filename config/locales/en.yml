@@ -31,19 +31,17 @@
 
 en:
   hello: "Hello world"
-  i18n_base_title: " | Ruby on Rails Tutorial Sample App"
+  base_title: " | Ruby on Rails Tutorial Sample App"
   english: English
   vietnam: vietnamese
   static_pages:
     home:
       page: "Home"
-      h1: "<h1>Sample App</h1>"
-      p_start: <p>
+      h1: Welcome to the Sample App
       line1: This is the home page for the
-      url_book: http://www.railstutorial.org
-      book_title: Ruby on Rails Tutorial
       line2: sample application.
-      p_end: </p>
+      book_url: http://www.railstutorial.org
+      book_title: Ruby on Rails Tutorial
     about:
       page: "About"
       content: <h1>About</h1>
