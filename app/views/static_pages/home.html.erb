@@ -5,12 +5,10 @@
   <h2>
     <%= t ".line1" %>
     <%= link_to t(".book_title"), t(".book_url") %>
-    <%= t ".line1" %>
+    <%= t ".line2" %>
   </h2>
 
-  <%= link_to "Sign up now!", '#', class: "btn btn-lg btn-primary" %>
+  <%= link_to t(".sign_now"), "#", class: "btn btn-lg btn-primary" %>
 </div>
-<%= link_to image_tag("tumblr_static_thingy.png", alt: "Rails logo"),
-            'http://rubyonrails.org/', class: "myimg" %>
-<%= link_to image_tag("MyLove.jpeg", width: 100, alt: "Rails logo"),
-            'http://rubyonrails.org/',class: "hide" %>
+<%= link_to image_tag(t(".img_path"), width: 100, alt: t("logo_text")),
+  t("ruby_url"),class: "hide" %>

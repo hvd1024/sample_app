@@ -1,2 +1,7 @@
 <% provide :title, t(".page") %>
-<%= raw t ".content" %>
+
+<h1><%= t ".page" %></h1>
+<p>
+  <%= t ".line1" %>
+  <%= link_to t(".contact_title"), t(".contact_url") %>
+</p>

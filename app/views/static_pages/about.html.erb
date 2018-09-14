@@ -1,4 +1,14 @@
 <% provide :title, t(".page") %>
-<%= link_to t("english"), locale: "en" %>
-<%= link_to t("vietnam"), locale: "vi" %>
-<%= raw t ".content" %>
+
+<h1><%= t ".page" %></h1>
+<p>
+  <%= t ".the" %>
+  <em><%= link_to t(".home_title"), t(".home_url") %></em>
+  <%= t ".isa" %>
+  <%= link_to t(".book_title"), t(".book_url") %>
+  <%= t ".and" %>
+  <%= link_to t(".series_title"), t(".series_url") %>
+  <%= t ".dev" %>
+  <%= link_to t(".home_title"), t(".home_url") %>
+  <%= t ".end" %>
+</p>

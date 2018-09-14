@@ -1,4 +1,10 @@
 <% provide :title, t(".page") %>
-<%= link_to t("english"), locale: "en" %>
-<%= link_to t("vietnam"), locale: "vi" %>
-<%= raw t ".content" %>
+
+<h1><%= t(".page") %></h1>
+<p>
+  <%= t(".line1") %>
+  <%= link_to t(".help_title"), t(".help_url") %>
+  <%= t(".line1") %>
+  <em><%= link_to t(".book_title"), t(".book_url") %></em>
+  <%= t(".book") %>
+</p>
