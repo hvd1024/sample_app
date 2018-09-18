@@ -92,12 +92,11 @@ en:
       title: Sign up
       line: This will be a signup page for new users.
       lin: Log in
-  controllers:
-    session:
-      noti: Invalid email/password combination
   sessions:
     new:
       page: "Log in"
       new_user: New user?
       sign_now: "Sign up now!"
-
+    create:
+      flash_invalid: "Invalid email/password combination"
+      welcome: "Chào mừng bạn đến thế giới của chúng tôi !!!"
