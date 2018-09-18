@@ -92,6 +92,18 @@ en:
       title: Sign up
       line: This will be a signup page for new users.
       lin: Log in
+      bt_name: Create my account
+    user:
+      del: delete
+      sure: You sure?
+    edit:
+      title: Edit user
+      bt_name: Save changes
+      h1: Update your profile
+      change_title: change
+      change_url: http://gravatar.com/emails
+    index:
+      title: All users
   sessions:
     new:
       page: "Log in"
