@@ -88,15 +88,33 @@ en:
       img_path: tumblr_static_thingy.png
       myclass: myimg
   users:
+    fl_login: Please log in.
+    fl_notfound: User not found !!!
+    fl_update: Profile updated
+    fl_del: User deleted
     new:
       title: Sign up
       line: This will be a signup page for new users.
       lin: Log in
+      bt_name: Create my account
+      h1: Sign up
+    user:
+      del: delete
+      sure: You sure?
+    edit:
+      title: Edit user
+      bt_name: Save changes
+      h1: Update your profile
+      change_title: change
+      change_url: http://gravatar.com/emails
+    index:
+      title: All users
+    create:
+      flash_invalid: "Invalid email/password combination"
+      welcome: "Chào mừng bạn đến thế giới của chúng tôi !!!"
   sessions:
     new:
       page: "Log in"
       new_user: New user?
       sign_now: "Sign up now!"
-    create:
-      flash_invalid: "Invalid email/password combination"
-      welcome: "Chào mừng bạn đến thế giới của chúng tôi !!!"
+
