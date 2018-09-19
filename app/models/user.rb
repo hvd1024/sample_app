@@ -10,4 +10,14 @@ class User < ApplicationRecord
     length: {minimum: Settings.user.pass.min_leng}
   has_secure_password
   before_save{email.downcase!}
+
+  def self.digest string
+    cost =
+      if ActiveModel::SecurePassword.min_cost
+        BCrypt::Engine::MIN_COST
+      else
+        BCrypt::Engine.cost
+      end
+    BCrypt::Password.create(string, cost: cost)
+  end
 end
