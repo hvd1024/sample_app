@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   before_action :correct_user, only: [:edit, :update]
 
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.select_activated.paginate(page: params[:page])
   end
 
   def new
@@ -17,9 +17,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      log_in @user
-      flash[:success] = t(".welcome")
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t "controllers.flash_pls_check"
+      redirect_to root_url
     else
       render :new
     end

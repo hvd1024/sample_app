@@ -5,3 +5,6 @@ user:
     max_leng: 255
   pass:
     min_leng: 6
+
+ss_controllers:
+  remember_check: "1"
