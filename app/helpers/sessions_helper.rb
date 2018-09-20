@@ -25,18 +25,6 @@ module SessionsHelper
     end
   end
 
-  def current_user_case
-    if session[:user_id].blank?
-      @current_user ||= User.find_by(id: session[:user_id])
-    elsif cookies.signed[:user_id].blank?
-      user = User.find_by(id: cookies.signed[:user_id])
-      if user&.authenticated?(cookies[:remember_token])
-        log_in user
-        @current_user = user
-      end
-    end
-  end
-
   def logged_in?
     current_user.present?
   end
