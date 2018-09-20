@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
+  before_action :logged_in_user, only: [:index, :show, :edit, :update, :destroy]
   before_action :admin_user, only: :destroy
   before_action :find_user, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update]
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
       flash[:success] = t(".fl_update")
       redirect_to @user
     else
-      render :edit
+      render :new
     end
   end
 
@@ -43,6 +43,20 @@ class UsersController < ApplicationController
     @user.destroy
     flash[:success] = t(".fl_del")
     redirect_to users_url
+  end
+
+  def following
+    @title = t "controllers.tt_fling"
+    @user = User.find(params[:id])
+    @users = @user.following.paginate(page: params[:page])
+    render "show_follow"
+  end
+
+  def followers
+    @title = t "controllers.tt_fler"
+    @user = User.find(params[:id])
+    @users = @user.followers.paginate(page: params[:page])
+    render "show_follow"
   end
 
   private
