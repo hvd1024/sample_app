@@ -9,3 +9,4 @@ ss_controllers:
   remember_check: "1"
 model:
   time_rs: 2
+  con_max: 140
