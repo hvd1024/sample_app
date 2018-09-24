@@ -8,7 +8,8 @@ class User < ApplicationRecord
     format: {with: VALID_EMAIL_REGEX},
     uniqueness: {case_sensitive: false}
   validates :password, presence: true,
-    length: {minimum: Settings.user.pass.min_leng}
+    length: {minimum: Settings.user.pass.min_leng},
+    allow_nil: true
   has_secure_password
   before_save{email.downcase!}
 
