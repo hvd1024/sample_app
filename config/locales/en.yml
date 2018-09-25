@@ -113,8 +113,12 @@ en:
       flash_invalid: "Invalid email/password combination"
       welcome: "Chào mừng bạn đến thế giới của chúng tôi !!!"
   sessions:
+    warn: "Account not activated. Check your email for the activation link."
     new:
       page: "Log in"
       new_user: New user?
       sign_now: "Sign up now!"
-
+  controllers:
+    flash_activ: Account activated!
+    flash_inval: Invalid activation link
+    flash_pls_check: Please check your email to activate your account.
