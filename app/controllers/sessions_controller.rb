@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     if user&.authenticate(params[:session][:password])
       user_active user
     else
-      flash.now[:danger] = t(".flash_invalid")
+      flash.now[:danger] = t("users.create.flash_invalid")
       render :new
     end
   end

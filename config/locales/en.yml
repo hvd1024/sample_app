@@ -122,3 +122,15 @@ en:
     flash_activ: Account activated!
     flash_inval: Invalid activation link
     flash_pls_check: Please check your email to activate your account.
+  password_resets:
+    flash_send_rs: Email sent with password reset instructions
+    flash_notfo: Email address not found
+    not_empty: can't be empty
+    flash_rs_com: Password has been reset.
+    flash_expired: Password reset has expired.
+    edit:
+      title: Reset password
+      lb_confirm: Confirmation
+      bt_update: Update password
+    new:
+      title: Forgot password

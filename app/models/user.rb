@@ -1,5 +1,7 @@
 class User < ApplicationRecord
-  attr_accessor :remember_token, :activation_token
+  attr_accessor :remember_token, :activation_token, :reset_token
+  before_save{email.downcase!}
+  before_create :create_activation_digest
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   validates :name,  presence: true,
     length: {maximum: Settings.user.name.max_leng}
@@ -11,9 +13,6 @@ class User < ApplicationRecord
     length: {minimum: Settings.user.pass.min_leng},
     allow_nil: true
   has_secure_password
-
-  before_create :create_activation_digest
-  before_save{email.downcase!}
 
   class << self
     def digest string
@@ -31,7 +30,7 @@ class User < ApplicationRecord
     end
 
     def select_activated
-      user_where = User.where(activated: true)
+      User.where(activated: true)
     end
   end
 
@@ -56,6 +55,20 @@ class User < ApplicationRecord
 
   def send_activation_email
     UserMailer.account_activation(self).deliver_now
+  end
+
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update_columns(reset_digest: User.digest(reset_token),
+      reset_sent_at: Time.zone.now)
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
+  end
+
+  def password_reset_expired?
+    reset_sent_at < Settings.model.time_rs.hours.ago
   end
 
   private
