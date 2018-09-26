@@ -122,15 +122,28 @@ en:
     flash_activ: Account activated!
     flash_inval: Invalid activation link
     flash_pls_check: Please check your email to activate your account.
+    flash_pls_login: Please log in.
+    f_create: Micropost created!
+    f_del_cuscess: Micropost deleted
+    f_del_error: Can't delete micropost !!!
   password_resets:
     flash_send_rs: Email sent with password reset instructions
     flash_notfo: Email address not found
     not_empty: can't be empty
     flash_rs_com: Password has been reset.
     flash_expired: Password reset has expired.
+    pw: password
     edit:
       title: Reset password
       lb_confirm: Confirmation
       bt_update: Update password
     new:
       title: Forgot password
+  models:
+    pic_mess: "should be less than 5MB"
+  microposts:
+    del: delete
+  shared:
+    micro_count:
+      one: "%{count} micropost"
+      other: "%{count} microposts"

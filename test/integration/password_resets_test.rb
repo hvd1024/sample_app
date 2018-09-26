@@ -34,5 +34,6 @@ class PasswordResetsTest < ActionDispatch::IntegrationTest
                user: {password:              "foobar",
                       password_confirmation: "foobar"}}
     assert_response :redirect
+    follow_redirect!
   end
 end
