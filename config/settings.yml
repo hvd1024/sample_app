@@ -10,3 +10,5 @@ ss_controllers:
 model:
   time_rs: 2
   con_max: 140
+micropost:
+  size_pic: 5

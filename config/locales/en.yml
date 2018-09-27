@@ -37,6 +37,7 @@ en:
       book_title: book
       sign_now: Sign up now!
       img_path: MyLove.jpg
+      micro_feed: Micropost Feed
     about:
       page: "About"
       the: The
@@ -126,6 +127,9 @@ en:
     f_create: Micropost created!
     f_del_cuscess: Micropost deleted
     f_del_error: Can't delete micropost !!!
+    f_del: Micropost deleted
+    tt_fling: Following
+    tt_fler: Followers
   password_resets:
     flash_send_rs: Email sent with password reset instructions
     flash_notfo: Email address not found
@@ -147,3 +151,9 @@ en:
     micro_count:
       one: "%{count} micropost"
       other: "%{count} microposts"
+    edit:
+      title: Reset password
+    new:
+      title: Forgot password
+  shared:
+    flw: followers
